@@ -9,7 +9,7 @@ interface Petal {
   size: number;
 }
 
-const NUM_PETALS = 30;
+const NUM_PETALS = 50;
 
 const generateRandomPetal = (id: number): Petal => ({
   id,
@@ -30,7 +30,9 @@ const SakuraPetals: React.FC = () => {
   }, []);
 
   return (
-    <div className="fixed inset-0 pointer-events-none z-50">
+
+    <div>
+    <div className="fixed inset-0 pointer-events-none z-0">
       {petals.map((petal) => (
         <div
           key={petal.id}
@@ -44,7 +46,26 @@ const SakuraPetals: React.FC = () => {
           }}
         />
       ))}
+       
     </div>
+    
+ <div className="fixed  inset-0 pointer-events-none z-1">
+      {petals.map((petal) => (
+        <div
+          key={petal.id}
+          className="sakura-petal"
+          style={{
+            left: `${petal.left}%`,
+            animationDelay: `${petal.delay}s`,
+            animationDuration: `${petal.duration}s`,
+            width: `${petal.size}px`,
+            height: `${petal.size}px`,
+          }}
+        />
+      ))}
+       
+    </div>
+</div>
   );
 };
 

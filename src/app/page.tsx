@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export default function HomePage() {
   return (
-    <main className="relative w-full h-screen overflow-hidden">
+    <main className="relative w-full h-screen overflow-hidden bg-white">
       {/* Sakura Petals Animation */}
       <SakuraPetals />
 
