@@ -28,7 +28,7 @@ export default function AddStoryPage() {
     }
   };
 
-  return (
+    return (
     <main className="relative min-h-screen flex items-center justify-center bg-gray-900">
       {/* Background Image with Darker Overlay */}
       <div className="absolute inset-0">

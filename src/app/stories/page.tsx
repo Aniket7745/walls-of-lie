@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Draggable from "react-draggable";
 import Image from 'next/image';
+import Link from "next/link";
 
 interface Story {
   _id: string;
@@ -227,6 +228,27 @@ export default function StoriesPage() {
           </div>
         </div>
       )}
+      <div className="absolute bottom-4 right-4 z-50 flex items-center gap-4">
+       <Link
+            href="/add-story"
+            className="
+              px-6 py-3
+              bg-purple-500/70
+              hover:bg-purple-500/90
+              text-white
+              rounded-lg
+              text-lg
+              transition
+              duration-300
+              shadow-lg
+              backdrop-blur-md
+              drop-shadow-[0_1px_1px_rgba(0,0,0,0.7)]
+              position: absolute;
+            "
+          >
+            Share Your Story
+          </Link>
+          </div>
     </main>
   );
 }
